@@ -1,14 +1,31 @@
-function pElementsBarra = pressureDistribution(vars4solve)
+function pElementsBarra = pressureDistribution(solidsInfo)
+
+%% Estructuras de datos
+
+fisura = struct;   % Posee la informacion de cada una de las fisuras.
+meshInfo = struct; % Posee la informacion de la malla entregada por el codigo de solidos.
+soluciones = struct; % Posee los vectores entregados por la funcion.
+boundaryConditions = struct; % Posee la informacion sobre las condiciones de borde
+
+
 
 %% Información sobre la Malla
 tic
-%% HOLA SOY EL MANi
-nFisuras = vars4solve.ifis;
-elem8Nod = vars4solve.elements;
-nodes = vars4solve.nodes;
-elementsBarraT = vars4solve.elements_Barra;
-nodosBombas = vars4solve.nod_in;
+nFisuras = solidsInfo.ifis;
+elem8Nod = solidsInfo.elements;
+nodes = solidsInfo.nodes;
+elementsBarraT = solidsInfo.elements_Barra;
+nodosBombas = solidsInfo.nod_in; 
 nNodFisura = size(elementsBarraT,1)/nFisuras;
+
+meshInfo.nFisuras = solidsInfo.ifis;
+meshInfo.elem8Nod = solidsInfo.elements;
+meshInfo.nodes = solidsInfo.nodes;
+meshInfo.elementsBarraT = solidsInfo.elements_Barra;
+meshInfo.nodosBombas = solidsInfo.nod_in; 
+meshInfo.nNodFisura = size(elementsBarraT,1)/nFisuras;
+
+
 
 
 %% Geometria de la malla
@@ -16,7 +33,6 @@ nNodFisura = size(elementsBarraT,1)/nFisuras;
 Hcell = cell(nFisuras,1);
 dofsBCcell =  cell(nFisuras,2);
 nodeDofscell = cell(nFisuras,1);
-fisura = struct;
 
 for iFisura = 1:nFisuras
 
@@ -199,10 +215,10 @@ p1 = ones(nFisuras,1)*pMax;                      % Valor semilla p1
 % f(p0) %
 
 for iFisura = 1:nFisuras
-    vars4solve.pBC(1 + (iFisura - 1)*nNodFisura:(iFisura - 1)*nNodFisura + nNodFisura,:) = p0(iFisura)*ones(nNodFisura,2);   %%% Arreglar
+    solidsInfo.pBC(1 + (iFisura - 1)*nNodFisura:(iFisura - 1)*nNodFisura + nNodFisura,:) = p0(iFisura)*ones(nNodFisura,2);   %%% Arreglar
 end
 
-qLK = pressure4LeakOff(vars4solve);
+qLK = pressure4LeakOff(solidsInfo);
 qLK=qLK(:,1)+qLK(:,2);
 qLK = -qLK;
 %%% pablo
@@ -221,10 +237,10 @@ f0 = Qsys - Qbomba;
 
 
 for iFisura = 1:nFisuras
-    vars4solve.pBC(1 + (iFisura - 1)*nNodFisura:(iFisura - 1)*nNodFisura + nNodFisura,:) = p1(iFisura)*ones(nNodFisura,2);   %%% Arreglar
+    solidsInfo.pBC(1 + (iFisura - 1)*nNodFisura:(iFisura - 1)*nNodFisura + nNodFisura,:) = p1(iFisura)*ones(nNodFisura,2);   %%% Arreglar
 end
 
-qLK = pressure4LeakOff(vars4solve);
+qLK = pressure4LeakOff(solidsInfo);
 qLK=qLK(:,1)+qLK(:,2);
 qLK = -qLK;
 
@@ -258,15 +274,15 @@ for k = 1:MAXi
     % Calculo la f1 del siguiente step, f0 sera el f1 anterior, no hay
     % necesidad de recalcular.
     for iFisura = 1:nFisuras
-        vars4solve.pBC(1 + (iFisura - 1)*nNodFisura:(iFisura - 1)*nNodFisura + nNodFisura,:) = p1(iFisura)*ones(nNodFisura,2);   %%% Arreglar
+        solidsInfo.pBC(1 + (iFisura - 1)*nNodFisura:(iFisura - 1)*nNodFisura + nNodFisura,:) = p1(iFisura)*ones(nNodFisura,2);   %%% Arreglar
     end
-    qLK0 = pressure4LeakOff(vars4solve);
+    qLK0 = pressure4LeakOff(solidsInfo);
     qLK0 = qLK0(:,1)+qLK0(:,2);
     qLK0 = -qLK0;
     for j = 1:MAXi
         [pElementsBarra, qElementsBarra, Qbomba] = solverNFisuras(qLK0, nFisuras, dofsBCcell, QbPoly, p1,elementsBarraT,nodeDofscell,Hcell,nNodFisura);
-        vars4solve.pBC = [pElementsBarra pElementsBarra];
-        qLK = pressure4LeakOff(vars4solve);
+        solidsInfo.pBC = [pElementsBarra pElementsBarra];
+        qLK = pressure4LeakOff(solidsInfo);
         qLK=qLK(:,1)+qLK(:,2);
         qLK = -qLK;
         
@@ -319,7 +335,7 @@ for k = 1:MAXi
     disp('Caudales final en el nodo de la bomba: ' )    
     display(Qsys);
     disp('Cantidad de iteraciones: ' )    
-    display(k);
+    display(k); 
     break
     else       
     end

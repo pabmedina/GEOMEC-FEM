@@ -1,12 +1,20 @@
-function pElementsBarra = pressureDistribution(vars4solve)
+function pElementsBarra = pressureDistribution(solidsInfo)
+
+%% Estructuras de datos
+
+fisura = struct;   % Posee la informacion de cada una de las fisuras.
+meshInfo = struct; % Posee la informacion de la malla entregada por el codigo de solidos.
+
+
+
 
 %% Información sobre la Malla
-
-nFisuras = vars4solve.ifis;
-elem8Nod = vars4solve.elements;
-nodes = vars4solve.nodes;
-elementsBarraT = vars4solve.elements_Barra;
-nodosBombas = vars4solve.nod_in;
+tic
+nFisuras = solidsInfo.ifis;
+elem8Nod = solidsInfo.elements;
+nodes = solidsInfo.nodes;
+elementsBarraT = solidsInfo.elements_Barra;
+nodosBombas = solidsInfo.nod_in; 
 nNodFisura = size(elementsBarraT,1)/nFisuras;
 
 
@@ -15,7 +23,6 @@ nNodFisura = size(elementsBarraT,1)/nFisuras;
 Hcell = cell(nFisuras,1);
 dofsBCcell =  cell(nFisuras,2);
 nodeDofscell = cell(nFisuras,1);
-fisura = struct;
 
 for iFisura = 1:nFisuras
 
@@ -117,7 +124,6 @@ for iFisura = 1:nFisuras
     H = sparse(I,J,S);
     
     Hcell{iFisura} =  H;
-    fisura(iFisura).H = H;
     
     
     
@@ -128,7 +134,7 @@ for iFisura = 1:nFisuras
     % Definicion de DOFs conocidos (C) y desconocidos (X)
     
     dofBomba = nodeDofs(ismember(nodeDofs(:,1),nodosBombas(iFisura)),2);                           % DOF bomba
-    dofsCi = [dofBomba];                      
+    dofsCi = [dofBomba];                      %#ok<NBRAK>
     dofsCe = [];
     dofsC = [dofsCe;
         dofsCi ];
@@ -136,8 +142,6 @@ for iFisura = 1:nFisuras
     
     dofsBCcell{iFisura}{1} = dofsC;
     dofsBCcell{iFisura}{2} = dofsX;
-    fisura(iFisura).dofs.X = dofsX;
-    fisura(iFisura).dofs.C = dofsC;
 
 end
 
@@ -201,10 +205,10 @@ p1 = ones(nFisuras,1)*pMax;                      % Valor semilla p1
 % f(p0) %
 
 for iFisura = 1:nFisuras
-    vars4solve.pBC(1 + (iFisura - 1)*nNodFisura:(1 + (iFisura - 1)*nNodFisura) + 11,:) = p0(iFisura)*ones(nNodFisura,2);   %%% Arreglar
+    solidsInfo.pBC(1 + (iFisura - 1)*nNodFisura:(iFisura - 1)*nNodFisura + nNodFisura,:) = p0(iFisura)*ones(nNodFisura,2);   %%% Arreglar
 end
 
-qLK = pressure4LeakOff(vars4solve);
+qLK = pressure4LeakOff(solidsInfo);
 qLK=qLK(:,1)+qLK(:,2);
 qLK = -qLK;
 %%% pablo
@@ -213,7 +217,7 @@ qLK = -qLK;
 
 Qsys = qElementsBarra(ismember(elementsBarraT(:,1),nodosBombas));
 f0 = Qsys - Qbomba;
-% plot(p0(1),Qsys(1),'*')
+
 
 
 
@@ -223,17 +227,17 @@ f0 = Qsys - Qbomba;
 
 
 for iFisura = 1:nFisuras
-    vars4solve.pBC(1 + (iFisura - 1)*nNodFisura:(1 + (iFisura - 1)*nNodFisura) + 11,:) = p1(iFisura)*ones(nNodFisura,2);   %%% Arreglar
+    solidsInfo.pBC(1 + (iFisura - 1)*nNodFisura:(iFisura - 1)*nNodFisura + nNodFisura,:) = p1(iFisura)*ones(nNodFisura,2);   %%% Arreglar
 end
 
-qLK = pressure4LeakOff(vars4solve);
+qLK = pressure4LeakOff(solidsInfo);
 qLK=qLK(:,1)+qLK(:,2);
 qLK = -qLK;
 
 [pElementsBarra, qElementsBarra, Qbomba] = solverNFisuras(qLK, nFisuras, dofsBCcell, QbPoly, p1,elementsBarraT,nodeDofscell,Hcell,nNodFisura);
 Qsys = qElementsBarra(ismember(elementsBarraT(:,1),nodosBombas));
 f1 = Qsys - Qbomba;
-% plot(p1(1),Qsys(1),'*')
+
 
 % Parametros de convergencia 
 DELTA = ones(nFisuras,1)*1e-5;                   % Tolerancia de error para la raiz
@@ -260,15 +264,15 @@ for k = 1:MAXi
     % Calculo la f1 del siguiente step, f0 sera el f1 anterior, no hay
     % necesidad de recalcular.
     for iFisura = 1:nFisuras
-        vars4solve.pBC(1 + (iFisura - 1)*nNodFisura:(1 + (iFisura - 1)*nNodFisura) + 11,:) = p1(iFisura)*ones(nNodFisura,2);   %%% Arreglar
+        solidsInfo.pBC(1 + (iFisura - 1)*nNodFisura:(iFisura - 1)*nNodFisura + nNodFisura,:) = p1(iFisura)*ones(nNodFisura,2);   %%% Arreglar
     end
-    qLK0 = pressure4LeakOff(vars4solve);
+    qLK0 = pressure4LeakOff(solidsInfo);
     qLK0 = qLK0(:,1)+qLK0(:,2);
     qLK0 = -qLK0;
     for j = 1:MAXi
         [pElementsBarra, qElementsBarra, Qbomba] = solverNFisuras(qLK0, nFisuras, dofsBCcell, QbPoly, p1,elementsBarraT,nodeDofscell,Hcell,nNodFisura);
-        vars4solve.pBC = [pElementsBarra pElementsBarra];
-        qLK = pressure4LeakOff(vars4solve);
+        solidsInfo.pBC = [pElementsBarra pElementsBarra];
+        qLK = pressure4LeakOff(solidsInfo);
         qLK=qLK(:,1)+qLK(:,2);
         qLK = -qLK;
         
@@ -306,13 +310,10 @@ for k = 1:MAXi
     Qsys = qElementsBarra(ismember(elementsBarraT(:,1),nodosBombas));
 %     plot(p1(1),Qsys(1),'*')
     f1 = Qsys - Qbomba;
-    condicion = relErr < DELTA
-    err < DELTA
-    abs(f1) < EPSILON
     errores = [sum(err < DELTA) sum(relErr < DELTA) sum(abs(f1) < EPSILON)];
 
     % Check convergencia
-    if any( (errores(1) == 3) || (errores(2) == 3) || (errores(3) == 3))
+    if any( (errores(1) == nFisuras) || (errores(2) == nFisuras) || (errores(3) == nFisuras))
         if any(sum(p1 > pMax*ones(nFisuras,1)) || sum(p1 < pMin*ones(nFisuras,1)))
             disp('El equilibrio no existe para la curva de bomba cargada' );
             break
@@ -324,10 +325,11 @@ for k = 1:MAXi
     disp('Caudales final en el nodo de la bomba: ' )    
     display(Qsys);
     disp('Cantidad de iteraciones: ' )    
-    display(k);
+    display(k); 
     break
     else       
     end
 end
 pElementsBarra = [pElementsBarra pElementsBarra];
+toc
 end

@@ -8,7 +8,7 @@ tic
 addpath('mallas')
 addpath('18-5-18')
  
-malla = 'M3';%'M333P';%'M3test';%'M333';%'M22';%'M4';%''M2';%'M3';%'M333P';%%;%
+malla = 'M22';%'M3';%'M333P';%'M3test';%'M333';%'M4';%''M2';%'M3';%'M333P';%%;%
 
 
 %%% M22: 640 elementos
