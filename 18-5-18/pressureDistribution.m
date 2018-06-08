@@ -2,6 +2,7 @@ function pElementsBarra = pressureDistribution(vars4solve)
 
 %% Información sobre la Malla
 tic
+%% HOLA SOY EL MANi
 nFisuras = vars4solve.ifis;
 elem8Nod = vars4solve.elements;
 nodes = vars4solve.nodes;
