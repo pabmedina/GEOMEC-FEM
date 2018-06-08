@@ -1,0 +1,4 @@
+% FILTOBJ   DFILDEMO ‚É‘Î‚·‚éŽü”g”‰ž“š‚ðo—Í
+
+
+%   Copyright 1990-2006 The MathWorks, Inc.

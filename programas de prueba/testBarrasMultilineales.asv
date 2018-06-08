@@ -1,0 +1,91 @@
+clc 
+clearvars
+tic
+% close all
+
+nodes = [ 0 0
+          1 0
+          2 0
+          3 0]*1000;
+      
+elements = [1 2
+            2 3
+            3 4];
+%             2 3
+%             2 3];
+        
+        
+nNod = size(nodes,1);
+nel = size(elements,1);
+nDofNod = 1;
+ndoftot=nNod*nDofNod;
+
+A = 4000;  % Area de cada elemento 
+
+qPaso = 50;
+q= qPaso;
+L = 1600;
+
+bc = false(nNod,nDofNod);       % Matriz de condiciones de borde
+bc(1,1) = true;
+bc(end) = true;
+
+
+
+% Propiedades del Material
+E_0 = 210E3;
+
+E = E_0;
+    
+% Armado Matriz de Rigidez
+K = zeros(nDofNod*nNod);
+
+for iele = 1:nel;
+    dir = nodes(elements(iele,2),:) - nodes(elements(iele,1),:);
+    le = norm(dir);
+    Ke =  A*E_0/le * [ 1 -1
+                    -1  1 ];
+    eleDofs = node2dof(elements(iele,:),nDofNod);     
+    K(eleDofs,eleDofs) = K(eleDofs,eleDofs) + Ke;
+end
+
+desp1=0.008;
+
+despRot=4*desp1;
+
+rompedor=0;
+iter=0;
+E_Barra = [-1e15 3e7 -2e4 0];
+
+caso = '1';
+t = 1:1:20;
+
+gapViejo=0;
+direccion=1;
+
+% for itime = 1:length(t)
+tic
+
+count=0;
+
+
+R = zeros(nNod,nDofNod);               % Vector de cargas                   
+R(2,1) = -q; 
+R(3,1) = q;
+
+% Reduccion Matriz
+fixed = reshape(bc',[],1);
+free = ~fixed;
+
+Rr = reshape(R',[],1);
+
+% Solver
+Dr = K(free,free)\Rr(free);
+% Reconstruccion
+D = zeros(nDofNod*nNod,1);
+D(free) = D(free) + Dr;
+
+ 
+    
+toc
+% end

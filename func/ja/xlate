@@ -1,0 +1,744 @@
+% Copyright 2009 The MathWorks, Inc.
+% $Revision: 1.1.6.7 $
+
+%% toolbox/optim/optim/barrier.m
+<(barrier)Constraint evaluation error at trial point.\n
+>(barrier)解を求める点で制約を評価するときにエラーが発生しました。\n
+<(barrier)Entering honorIneqsBndsMode\n
+>(barrier)honorIneqsBndsMode の入力\n
+<(barrier)Nonlinear constraint function is undefined at initial point. Fmincon cannot continue.
+>(barrier)初期点で非線形制約関数が未定義です。関数 fmincon で計算を続行できません。
+<(barrier)Objective evaluation error at trial point.\n
+>(barrier)解を求める点で目的関数を評価するときにエラーが発生しました。\n
+<(barrier)Objective function is undefined at initial point. Fmincon cannot continue.
+>(barrier)初期点で目的関数が未定義です。関数 Fmincon で計算を続行できません。
+<(barrier)Unknown state in CALLOUTPUTANDPLOTFCNS.
+>(barrier)関数 CALLOUTPUTANDPLOTFCNS の state が不明です。
+
+%% toolbox/optim/optim/classifyBoundsOnVars.m
+<(classifyBoundsOnVars)Bounds lb and ub cannot be equal and infinite.
+>(classifyBoundsOnVars)下限 lb と上限 ub を等しくしたり、無限大にしたりすることはできません。
+<(classifyBoundsOnVars)Bounds lb and ub must not be NaN.
+>(classifyBoundsOnVars)下限 lb と上限 ub を NaN にすることはできません。
+<(classifyBoundsOnVars)Lower bounds lb cannot be +Inf.
+>(classifyBoundsOnVars)下限 lb を +Inf にすることはできません。
+<(classifyBoundsOnVars)Upper bounds ub cannot be -Inf.
+>(classifyBoundsOnVars)上限 ub を -Inf にすることはできません。
+
+%% toolbox/optim/optim/sllsbox.m
+<(sllsbox)Equal upper and lower bounds not permitted in this large-scale algorithm.\nUse equality constraints and the medium-scale algorithm instead.
+>(sllsbox)この大規模なアルゴリズムでは、上限と下限を同じにすることはできません。\n代わりに、等式制約と中規模なアルゴリズムを使用してください。
+<(sllsbox)Inconsistent bounds.
+>(sllsbox)上限と下限の指定が矛盾しています。
+<(sllsbox)Option 'MaxPCGIter' must be an integer value if not the default.
+>(sllsbox)'MaxPCGIter' オプションをデフォルト以外にする場合は、整数値にする必要があります。
+<(sllsbox)Option 'TypicalX' must be a matrix (not a string) if not the default.
+>(sllsbox)'TypicalX' オプションをデフォルト以外にする場合は、文字列でなく行列でなければなりません。
+<(sllsbox)n must be positive.
+>(sllsbox)n は正でなければなりません。
+
+%% toolbox/optim/optim/optimplotconstrviolation.m
+<(optimplotconstrviolation)Constraint violation
+>(optimplotconstrviolation)制約違反
+<(optimplotconstrviolation)Maximum Constraint Violation: %g
+>(optimplotconstrviolation)最大制約違反: %g
+<(optimplotconstrviolation)Maximum Constraint Violation: not available
+>(optimplotconstrviolation)最大制約違反: 使用できません。
+<(optimplotconstrviolation)Iteration
+>(optimplotconstrviolation)反復
+
+%% toolbox/optim/optim/sfminbx.m
+<(sfminbx)%s cannot continue: user function is returning Inf or NaN values.
+>(sfminbx)%s を続けることができません: ユーザー関数は Inf または NaN 値を出力しています。
+<(sfminbx)Function derivative
+>(sfminbx)導関数
+<(sfminbx)Option 'MaxFunEvals' must be an integer value if not the default.
+>(sfminbx)'MaxFunEvals' オプションをデフォルト以外にする場合は、整数値にする必要があります。
+<(sfminbx)Undefined calltype.
+>(sfminbx)calltype が未定義です。
+
+%% toolbox/optim/optim/optimplotfirstorderopt.m
+<(optimplotfirstorderopt)First-order Optimality: %g
+>(optimplotfirstorderopt)1 次の最適性: %g
+<(optimplotfirstorderopt)First-order Optimality: not available
+>(optimplotfirstorderopt)1 次の最適性: 使用できません
+<(optimplotfirstorderopt)First-order optimality
+>(optimplotfirstorderopt)1 次の最適性
+
+%% toolbox/optim/optim/fgoalattain.m
+<(fgoalattain)A must have %i column(s).
+>(fgoalattain)A は %i 列でなければなりません。
+<(fgoalattain)Aeq must have %i column(s).
+>(fgoalattain)Aeq は %i 列でなければなりません。
+<(fgoalattain)FGOALATTAIN does not use user-supplied Hessian.
+>(fgoalattain)関数 FGOALATTAIN では、ユーザーがヘッセ行列を指定することはできません。
+<(fgoalattain)FGOALATTAIN only accepts inputs of data type double.
+>(fgoalattain)関数 FGOALATTAIN は、double 型の入力しか受け入れません。
+<(fgoalattain)FGOALATTAIN requires four input arguments.
+>(fgoalattain)関数 FGOALATTAIN には、4 つの入力引数が必要です。
+<(fgoalattain)FUN must be a function handle or a cell array of two function handles.
+>(fgoalattain)FUN は関数ハンドルか、2 つの関数ハンドルのセル配列でなければなりません。
+<(fgoalattain)Large-scale algorithm not currently available for this problem type.
+>(fgoalattain)現在、このタイプの問題を解く大規模なアルゴリズムはありません。
+<(fgoalattain)Option GoalsExactAchieve cannot be greater than the number of elements in F returned by FUN. Setting GoalsExactAchieve to numel(F) instead.
+>(fgoalattain)GoalsExactAchieve オプションは、FUN で出力される F の要素の数より大きくすることはできません。代わりに GoalsExactAchieve を numel(F) に設定します。
+<(fgoalattain)Size of WEIGHT must be equal to the size of GOAL.
+>(fgoalattain)WEIGHT のサイズは、GOAL と等しくなければなりません。
+<(fgoalattain)The input to FGOALATTAIN should be either a structure with valid fields or consist of at least four arguments.
+>(fgoalattain)関数 FGOALATTAIN の入力は、有効なフィールドのある構造体か、少なくとも 4 つの引数でなければなりません。
+<(fgoalattain)Undefined calltype in FGOALATTAIN.
+>(fgoalattain)関数 FGOALATTAIN の calltype が未定義です。
+
+%% toolbox/optim/optim/fzmult.m
+<(fzmult)Dimensions of A and V are not compatible in FZMULT.
+>(fzmult)関数 FZMULT の A と V の次元が一致していません。
+<(fzmult)FZMULT expects A to have more columns than rows.
+>(fzmult)関数 FZMULT の A は、列数が行数より多くなければなりません。
+<(fzmult)FZMULT expects at least 2 input arguments.
+>(fzmult)関数 FZMULT には、少なくとも 2 つの入力引数が必要です。
+<(fzmult)FZMULT expects sparse A.
+>(fzmult)関数 FZMULT の A はスパース行列でなければなりません。
+<(fzmult)Invalid string used for TRANSPOSE argument to FZMULT.
+>(fzmult)関数 FZMULT の TRANSPOSE 引数の文字列が無効です。
+
+%% toolbox/optim/optim/gangstr.m
+<(gangstr)Input matrix must have as many columns as rows.
+>(gangstr)入力行列は、列数と行数が同じでなければなりません。
+
+%% toolbox/optim/optim/goalcon.m
+<(goalcon)Failure in initial user-supplied nonlinear constraint function evaluation. Optimization cannot continue.
+>(goalcon)ユーザーが指定した初期非線形制約関数を評価できませんでした。最適化を続行できません。
+<(goalcon)Failure in initial user-supplied nonlinear constraint gradient function evaluation. Optimization cannot continue.
+>(goalcon)ユーザーが指定した初期非線形制約勾配関数を評価できませんでした。最適化を続行できません。
+<(goalcon)Failure in initial user-supplied objective function evaluation. Optimization cannot continue.
+>(goalcon)ユーザーが指定した初期目的関数を評価できませんでした。最適化を続行できません。
+<(goalcon)Failure in initial user-supplied objective gradient function evaluation. Optimization cannot continue.
+>(goalcon)ユーザーが指定した初期目的勾配関数を評価できませんでした。最適化を続行できません。
+<(goalcon)Gradient of the nonlinear equality constraints must have size %i-by-%i.
+>(goalcon)非線形等式制約の勾配は、%i 行 %i 列でなければなりません。
+<(goalcon)Gradient of the nonlinear inequality constraints must have size %i-by-%i.
+>(goalcon)非線形非等式制約の勾配は、%i 行 %i 列でなければなりません。
+<(goalcon)Gradient of the objectives must have size %i-by-%i.
+>(goalcon)目的関数の勾配は、%i 行 %i 列でなければなりません。
+<(goalcon)Must provide gradient of function if gradient of constraints to be used.
+>(goalcon)制約の勾配を使用する場合は、関数の勾配を指定しなければなりません。
+<(goalcon)Size of GOAL must be equal to the size of F returned by FUN.
+>(goalcon)GOAL のサイズは FUN で出力される F と等しくなければなりません。
+<(goalcon)Undefined calltype in GOALCON.
+>(goalcon)関数 GOALCON の calltype が未定義です。
+
+%% toolbox/optim/optim/bintprog.m
+<(bintprog)BINTPROG input arguments cannot have Inf values.
+>(bintprog)関数 BINTPROG の引数を Inf にすることはできません。
+<(bintprog)BINTPROG input arguments cannot have NaN values.
+>(bintprog)関数 BINTPROG の引数を NaN にすることはできません。
+<(bintprog)BINTPROG only accepts inputs of data type double.
+>(bintprog)関数 BINTPROG は、double 型の入力しか受け入れません。
+<(bintprog)BINTPROG requires at least one input argument.
+>(bintprog)関数 BINTPROG には、入力引数が少なくとも 1 つ必要です。
+<(bintprog)Invalid exit status.
+>(bintprog)終了状態が無効です。
+<(bintprog)Invalid option for branch strategy.
+>(bintprog)分岐法のオプションが無効です。
+<(bintprog)Invalid option for node search strategy in BINTPROG.
+>(bintprog)関数 BINTPROG のノード探索法のオプションが無効です。
+<(bintprog)Option 'MaxIter' must be a real positive scalar if not the default.
+>(bintprog)'MaxIter' オプションをデフォルト以外にする場合は、正の実数のスカラーでなければなりません。
+<(bintprog)Option 'MaxNodes' must be a real positive scalar if not the default.
+>(bintprog)'MaxNodes' オプションをデフォルト以外にする場合は、正の実数のスカラーでなければなりません。
+<(bintprog)Option 'MaxRLPIter' must be a real positive scalar if not the default.
+>(bintprog)'MaxRLPIter' オプションをデフォルト以外にする場合は、正の実数のスカラーにする必要があります。
+<(bintprog)The choice of branch variables is wrong.
+>(bintprog)枝変数の選択が間違っています。
+<(bintprog)The given starting point x0 is not binary integer feasible; it will be ignored.
+>(bintprog)初期点 x0 は、2 値整数で可解でなければなりません。そうでない場合は無視されます。
+<(bintprog)The length of x0 must be the same as the length of f.
+>(bintprog)x0 の長さは、f の長さと同じでなければなりません。
+<(bintprog)The number of columns in A must be the same as the length of f.
+>(bintprog)A の列数は、f の長さと同じでなければなりません。
+<(bintprog)The number of columns in Aeq must be the same as the length of f.
+>(bintprog)Aeq の列数は、f の長さと同じでなければなりません。
+<(bintprog)The number of rows in A must be the same as the length of b.
+>(bintprog)A の行数は、b の長さと同じでなければなりません。
+<(bintprog)The number of rows in Aeq must be the same as the length of beq.
+>(bintprog)Aeq の行数は、beq の長さと同じでなければなりません。
+<(bintprog)The problem is empty; returning an empty solution.\n
+>(bintprog)問題が空です。空の解が出力されます。\n
+<(bintprog)The problem might be ill-posed; try adjusting TolRLPFun, or try reformulating the problem.
+>(bintprog)問題の設定がよくない可能性があります。TolRLPFun を調整するか、問題を定式化し直してください。
+<(bintprog)The size of the problem is too large for the current solver.
+>(bintprog)問題の規模が大きすぎるため、現在のソルバーでは解けません。
+<(bintprog)The solution is not integer but is within the given integer tolerance.\n    If the current solution is not satisfactory, decrease TolXInteger.
+>(bintprog)解は整数ではありませんが、指定された許容範囲内です。\n    現在の解が適切でない場合は、TolXInteger を小さくしてください。
+
+%% toolbox/optim/optim/fminimax.m
+<(fminimax)FMINIMAX does not use user-supplied Hessian.
+>(fminimax)関数 FMINIMAX では、ユーザーがヘッセ行列を指定することはできません。
+<(fminimax)FMINIMAX only accepts inputs of data type double.
+>(fminimax)関数 FMINIMAX は、double 型の入力しか受け入れません。
+<(fminimax)FMINIMAX requires two input arguments.
+>(fminimax)関数 FMINIMAX には 2 つの入力引数が必要です。
+<(fminimax)FUN must be a function handle or a cell array of two function handles.
+>(fminimax)FUN は関数ハンドルか、2 つの関数ハンドルのセル配列でなければなりません。
+<(fminimax)Option MinAbsMax cannot be greater than the number of elements in F returned by FUN. Setting MinAbsMax to numel(F) instead.
+>(fminimax)MinAbsMax オプションは、FUN で出力される F の要素の数より大きくすることはできません。代わりに MinAbsMax を numel(F) に設定します。
+<(fminimax)The input to FMINIMAX should be either a structure with valid fields or consist of at least two arguments.
+>(fminimax)関数 FMINIMAX の入力は、有効なフィールドのある構造体か、少なくとも 2 つの引数でなければなりません。
+<(fminimax)Undefined calltype in FMINIMAX.
+>(fminimax)関数 FMINIMAX の calltype が未定義です。
+
+%% toolbox/optim/optim/fminunc.m
+<(fminunc)FMINUNC only accepts inputs of data type double.
+>(fminunc)関数 FMINUNC は、double 型の入力しか受け入れません。
+<(fminunc)FMINUNC requires two input arguments.
+>(fminunc)関数 FMINUNC には 2 つの入力引数が必要です。
+<(fminunc)FUN must be function handle or a cell array of two function handles.
+>(fminunc)FUN は関数ハンドルか、2 つの関数ハンドルのセル配列でなければなりません。
+<(fminunc)Failure in initial user-supplied Hessian function evaluation. FMINUNC cannot continue.
+>(fminunc)ユーザーが指定した初期ヘッセ関数を評価できませんでした。関数 FMINUNC で計算を続行できません。
+<(fminunc)Failure in initial user-supplied gradient function evaluation. FMINUNC cannot continue.
+>(fminunc)ユーザーが指定した初期勾配関数を評価できませんでした。関数 FMINUNC で計算を続行できません。
+<(fminunc)Failure in initial user-supplied objective function evaluation. FMINUNC cannot continue.
+>(fminunc)ユーザーが指定した初期目的関数を評価できませんでした。関数 FMINUNC で計算を続行できません。
+<(fminunc)Gradient must be provided for trust-region algorithm;\n  using line-search algorithm instead.
+>(fminunc)信頼領域法では勾配を指定しなければなりません。\n代わりに、直線探索法を使用します。
+<(fminunc)Medium-scale algorithm is a Quasi-Newton algorithm and does not use analytic Hessian.\n Hessian flag in options will be ignored (user-supplied Hessian will not be used).
+>(fminunc)中規模なアルゴリズムでは、準ニュートン法を使います。解析的ヘッセ行列は使用しません。\n options の Hessian の設定が無視されます (ユーザーが指定したヘッセ行列は使用されません)。
+<(fminunc)Problem not handled by FMINUNC.
+>(fminunc)この問題は関数 FMINUNC で処理できません。
+<(fminunc)The input to FMINUNC should be either a structure with valid fields or consist of at least two arguments.
+>(fminunc)関数 FMINUNC の入力は、有効なフィールドのある構造体か、少なくとも 2 つの引数でなければなりません。
+<(fminunc)Undefined calltype in FMINUNC.
+>(fminunc)関数 FMINUNC の calltype が未定義です。
+<(fminunc)Value of Hessian option unavailable in large-scale algorithm. Possible\n values are 'on' and 'off'.
+>(fminunc)Hessian オプションに指定した値は、大規模なアルゴリズムで使用できません。\n'on' または 'off' にしてください。
+
+%% toolbox/optim/optim/fseminf.m
+<(fseminf)FSEMINF does not use user supplied Hessian.
+>(fseminf)関数 FSEMINF では、ユーザーがヘッセ行列を指定することはできません。
+<(fseminf)FSEMINF does not use user supplied constraint gradients.
+>(fseminf)関数 FSEMINF では、ユーザーが制約の勾配を指定することはできません。
+<(fseminf)FSEMINF only accepts inputs of data type double.
+>(fseminf)関数 FSEMINF は、double 型の入力しか受け入れません。
+<(fseminf)FSEMINF requires four input arguments.
+>(fseminf)関数 FSEMINF には、4 つの入力引数が必要です。
+<(fseminf)Failure in initial evaluation of user-supplied semi-infinite constraint function (seminfcon). FSEMINF cannot continue.
+>(fseminf)ユーザーが指定した半無限制約関数 (seminfcon) を初期評価できませんでした。関数 FSEMINF で計算を続行できません。
+<(fseminf)Failure in initial user-supplied gradient function evaluation. FSEMINF cannot continue.
+>(fseminf)ユーザーが指定した初期勾配関数を評価できませんでした。関数 FSEMINF で計算を続行できません。
+<(fseminf)Failure in initial user-supplied objective function evaluation. FSEMINF cannot continue.
+>(fseminf)ユーザーが指定した初期目的関数を評価できませんでした。関数 FSEMINF で計算を続行できません。
+<(fseminf)Gradient of nonlinear equality constraints must have size %i-by-%i.
+>(fseminf)非線形等式制約の勾配は、%i 行 %i 列でなければなりません。
+<(fseminf)Gradient of nonlinear inequality constraints must have size %i-by-%i.
+>(fseminf)非線形不等式制約の勾配は、%i 行 %i 列でなければなりません。
+<(fseminf)No semi-infinite constraint function provided. Use FMINCON instead.
+>(fseminf)半無限制約関数が指定されていません。代わりに関数 FMINCON を使用してください。
+<(fseminf)SEMINFCON must be a function, not an expression.
+>(fseminf)SEMINFCON は、関数でなければなりません。式は使用できません。
+<(fseminf)SEMINFCON must be a function, not an inline object.
+>(fseminf)SEMINFCON は、関数でなければなりません。インライン オブジェクトは使用できません。
+<(fseminf)SEMINFCON must be a function.
+>(fseminf)SEMINFCON は関数でなければなりません。
+<(fseminf)The input to FSEMINF should be either a structure with valid fields or consist of at least four arguments.
+>(fseminf)関数 FSEMINF の入力は、有効なフィールドのある構造体か、少なくとも 4 つの引数でなければなりません。
+<(fseminf)The number of semi-infinite constraints must be positive.
+>(fseminf)半無限制約の数は、正でなければなりません。
+<(fseminf)Undefined calltype in FSEMINF.
+>(fseminf)関数 FSEMINF の calltype が未定義です。
+
+%% toolbox/optim/optim/optimplotresnorm.m
+<(optimplotresnorm)Norm of Residuals: %g
+>(optimplotresnorm)残差のノルム: %g
+<(optimplotresnorm)Norm of Residuals: not available
+>(optimplotresnorm)残差のノルム: 使用できません
+<(optimplotresnorm)Norm of residuals
+>(optimplotresnorm)残差のノルム
+
+%% toolbox/optim/optim/optimplotstepsize.m
+<(optimplotstepsize)Step Size: %g
+>(optimplotstepsize)ステップ サイズ: %g
+<(optimplotstepsize)Step Size: not available
+>(optimplotstepsize)ステップ サイズ: 使用できません
+<(optimplotstepsize)Step size
+>(optimplotstepsize)ステップ サイズ
+
+%% toolbox/optim/optim/optimtool.m
+<(optimtool)Do you want to replace the current problem and option values?
+>(optimtool)現在の問題とオプションの値を置き換えますか?
+<(optimtool)Invalid argument for OPTIMTOOL.
+>(optimtool)OPTIMTOOL の引数が無効です。
+<(optimtool)Optimization Tool
+>(optimtool)最適化ツール
+<(optimtool)Replace Current Values
+>(optimtool)現在の値の置換
+<(optimtool)The Optimization Tool (optimtool) requires Java Swing to run.
+>(optimtool)最適化ツール (optimtool) を使用するには、Java Swing を実行する必要があります。
+<(optimtool)The Optimization Tool is already open. Do you want to replace the current values?
+>(optimtool)最適化ツールが既に開いています。現在の値を置き換えますか?
+<(optimtool)The options field of '%s' does not contain a valid Optimization options structure.
+>(optimtool)'%s' のオプション フィールドに、有効な最適化オプション構造体が含まれていません。
+<(optimtool)The options field of the input argument does not contain a valid Optimization options structure.
+>(optimtool)入力引数のオプション フィールドに、有効な最適化オプション構造体が含まれていません。
+
+%% toolbox/optim/optim/optimtooloutput.m
+<(optimtooloutput)OPTIMTOOL is paused. MATLAB Command prompt will\nnot be accessible until the optimization solver is completed.\n
+>(optimtooloutput)OPTIMTOOL が一時停止しています。最適化ソルバーの実行が完了するまで、\nMATLAB のコマンド プロンプトにアクセスすることはできません。\n
+
+%% toolbox/optim/optim/linprog.m
+<(linprog)Converting to full matrices to solve.
+>(linprog)解を求めるために、非スパース行列に変換します。
+<(linprog)LINPROG only accepts inputs of data type double.
+>(linprog)関数 LINPROG は、double 型の入力しか受け入れません。
+<(linprog)LINPROG requires at least three input arguments.
+>(linprog)関数 LINPROG には、少なくとも 3 つの入力引数が必要です。
+<(linprog)Large scale (interior point) algorithm uses a built-in starting point;\nignoring user-supplied X0.
+>(linprog)大規模な (内点法) アルゴリズムは、組み込みの初期点を使用します。\nユーザーが指定した X0 は無視されます。
+<(linprog)Option 'MaxIter' must be an integer value if not the default.
+>(linprog)'MaxIter' オプションをデフォルト以外にする場合は、整数値にする必要があります。
+<(linprog)Simplex algorithm does not currently solve large-scale problems;\ncalling large-scale interior point algorithm. (To run simplex, set\nOPTIONS.LargeScale to 'off'.)
+>(linprog)現在、シンプレックス法では大規模問題を解けません。\n大規模内点法を使用します(シンプレックス法を使用する場合は、\nOPTIONS.LargeScale を 'off' に設定してください)。
+<(linprog)Simplex algorithm uses a built-in starting point; ignoring user-supplied X0.
+>(linprog)シンプレックス法は、組み込みの初期点を使用します。ユーザーが指定した X0 は無視されます。
+<(linprog)The input to LINPROG should be either a structure with valid fields or consist of at least three arguments.
+>(linprog)関数 LINPROG の入力は、有効なフィールドのある構造体か、少なくとも 3 つの引数でなければなりません。
+<(linprog)The medium-scale (active-set) algorithm does not currently handle sparse matrices.
+>(linprog)現在、中規模な (有効制約法) アルゴリズムでスパース行列を扱うことはできません。
+
+%% toolbox/optim/optim/sfd.m
+<(sfd)Undefined calltype in FMINUNC
+>(sfd)関数 FMINUNC の calltype が未定義です。
+
+%% toolbox/optim/optim/sfdnls.m
+<(sfdnls)SFDNLS requires at least eight arguments.
+>(sfdnls)関数 SFDNLS には、少なくとも 8 つの引数が必要です。
+
+%% toolbox/optim/optim/fsolve.m
+<(fsolve)FSOLVE only accepts inputs of data type double.
+>(fsolve)関数 FSOLVE は、double 型の入力しか受け入れません。
+<(fsolve)FSOLVE requires at least two input arguments.
+>(fsolve)関数 FSOLVE には、少なくとも 2 つの入力引数が必要です。
+<(fsolve)FUN must be a function name, valid string expression, or inline object; or, FUN may be a cell array that contains these type of objects.
+>(fsolve)FUN は関数名、有効な文字列式、インライン オブジェクトでなければなりません。または、これらの型のオブジェクトを含むセル配列にすることもできます。
+<(fsolve)Failure in initial user-supplied Jacobian function evaluation. FSOLVE cannot continue.
+>(fsolve)ユーザーが指定した初期ヤコビ関数を評価できませんでした。関数 FSOLVE で計算を続行できません。
+<(fsolve)Failure in initial user-supplied objective function evaluation. FSOLVE cannot continue.
+>(fsolve)ユーザーが指定した初期目的関数を評価できませんでした。関数 FSOLVE で計算を続行できません。
+<(fsolve)Invalid choice of option Algorithm for FSOLVE. Choose either 'trust-region-dogleg', 'trust-region-reflective', or 'levenberg-marquardt'.
+>(fsolve)関数 FSOLVE の Algorithm オプションの設定が無効です。'trust-region-dogleg', 'trust-region-reflective', 'levenberg-marquardt' のいずれかを選択してください。
+<(fsolve)Optimizer appears to be converging to a minimum that is not a root:\nSum of squares of the function values exceeds the square root of \noptions.TolFun. Try again with a new starting point.
+>(fsolve)最適化関数が根でない最小値に収束しています。\n関数の値の二乗の和は、\noptions.TolFun の平方根を超えています。別の初期点を指定してやり直してください。
+<(fsolve)Option LargeScale will be ignored in a future release. Running the trust-region-reflective algorithm. To run the trust-region-reflective algorithm without this warning, set option Algorithm to 'trust-region-reflective' instead.
+>(fsolve)LargeScale オプションは、今後のリリースで無視されます。trust-region-reflective アルゴリズムを実行します。この警告が表示されないようにするには、Algorithm オプションを 'trust-region-reflective' に設定してください。
+<(fsolve)Option NonlEqnAlgorithm will be ignored in a future release. Running the Levenberg-Marquardt algorithm. To run the Levenberg-Marquardt algorithm without this warning, set option Algorithm to 'levenberg-marquardt' instead.
+>(fsolve)NonlEqnAlgorithm オプションは、今後のリリースで無視されます。Levenberg-Marquardt 法を実行します。この警告が表示されないようにするには、Algorithm オプションを 'levenberg-marquardt' に設定してください。
+<(fsolve)The Gauss-Newton algorithm may be removed in a future release. Additionally, the option NonlEqnAlgorithm will be ignored in a future release. Running the Gauss-Newton algorithm. Set option Algorithm to either 'trust-region-dogleg', 'trust-region-reflective', or 'levenberg-marquardt' instead.
+>(fsolve)ガウス・ニュートン法は、今後のリリースで削除される可能性があります。さらに、NonlEqnAlgorithm オプションは、今後のリリースで無視されます。ガウス・ニュートン法を実行します。代わりに、Algorithm オプションを 'trust-region-dogleg', 'trust-region-reflective', 'levenberg-marquardt' のいずれかに設定してください。
+<(fsolve)The input to FSOLVE should be either a structure with valid fields or consist of at least two arguments.
+>(fsolve)関数 FSOLVE の入力は、有効なフィールドのある構造体か、少なくとも 2 つの引数でなければなりません。
+<(fsolve)Trust-region-dogleg algorithm of FSOLVE cannot handle non-square systems; using Levenberg-Marquardt algorithm instead.
+>(fsolve)関数 FSOLVE の trust-region-dogleg アルゴリズムでは、方程式と未知数の数が同じでない連立方程式は解けません。代わりに Levenberg-Marquardt 法を使用します。
+<(fsolve)Trust-region-reflective algorithm requires at least as many equations as variables; using Levenberg-Marquardt algorithm instead.
+>(fsolve)trust-region-reflective アルゴリズムでは、少なくとも変数と同じ数の方程式が必要です。代わりに Levenberg-Marquardt 法を使用します。
+<(fsolve)Undefined calltype in FSOLVE.
+>(fsolve)関数 FSOLVE の calltype が未定義です。
+<(fsolve)User-defined Jacobian is not the correct size: the Jacobian matrix should be %d-by-%d.
+>(fsolve)ユーザーが指定したヤコビ行列のサイズが間違っています。%d 行 %d 列にしてください。
+
+%% toolbox/optim/optim/getIpOptions.m
+<(getIpOptions)Both HessFcn and HessMult provided; using HessFcn and ignoring HessMult.
+>(getIpOptions)HessFcn と HessMult の両方が指定されています。HessMult を無視して、HessFcn を使用します。
+<(getIpOptions)Hessian option set to '%s' but no Hessian function provided in options HessFcn nor in HessMult.
+>(getIpOptions)Hessian オプションが '%s' に設定されていますが、HessFcn と HessMult のどちらのオプションでもヘッセ関数が指定されていません。
+<(getIpOptions)In order to use option HessMult, option SubproblemAlgorithm must be set to 'cg'.
+>(getIpOptions)HessMult オプションを使用するには、SubproblemAlgorithm オプションを 'cg' に設定しなければなりません。
+<(getIpOptions)In order to use option Hessian = 'fin-diff-grads', option SubproblemAlgorithm\n must be set to 'cg'.
+>(getIpOptions)Hessian オプションで 'fin-diff-grads' を使用するには、SubproblemAlgorithm\n オプションを'cg' に設定しなければなりません。
+<(getIpOptions)Must set GradObj = 'on' and (if nonlinear constraints are present)\nGradConstr = 'on' in order to use option Hessian = '%s'.
+>(getIpOptions)Hessian オプションで '%s' を使用するには、GradObj を 'on' に設定し、非線形制約がある場合は\nGradConstr を 'on' に設定しなければなりません。
+
+%% toolbox/optim/optim/sfminle.m
+<(sfminle)Linear dependencies detected: %i linear constraint(s) removed.\n
+>(sfminle)線形依存性があります。%i 個の線形制約を除去しました。\n
+<(sfminle)Undefined calltype in FMINCON.
+>(sfminle)関数 FMINCON の calltype が未定義です。
+
+%% toolbox/optim/optim/readOptimHashTable.m
+<(readOptimHashTable)Error in %s: %s \n
+>(readOptimHashTable)%s のエラー: %s\n
+
+%% toolbox/optim/optim/lsqnonlin.m
+<(lsqnonlin)Failure in initial user-supplied Jacobian function evaluation. LSQNONLIN cannot continue.
+>(lsqnonlin)ユーザーが指定した初期ヤコビ関数を評価できませんでした。関数 LSQNONLIN で計算を続行できません。
+<(lsqnonlin)Failure in initial user-supplied objective function evaluation. LSQNONLIN cannot continue.
+>(lsqnonlin)ユーザーが指定した初期目的関数を評価できませんでした。関数 LSQNONLIN で計算を続行できません。
+<(lsqnonlin)LSQNONLIN only accepts inputs of data type double.
+>(lsqnonlin)関数 LSQNONLIN は、double 型の入力しか受け入れません。
+<(lsqnonlin)LSQNONLIN requires two input arguments.
+>(lsqnonlin)関数 LSQNONLIN には 2 つの入力引数が必要です。
+<(lsqnonlin)The input to LSQNONLIN should be either a structure with valid fields or consist of at least two arguments.
+>(lsqnonlin)関数 LSQNONLIN の入力は、有効なフィールドのある構造体か、少なくとも 2 つの引数でなければなりません。
+<(lsqnonlin)Undefined calltype in LSQNONLIN.
+>(lsqnonlin)関数 LSQNONLIN の calltype が未定義です。
+
+%% toolbox/optim/optim/quadprog.m
+<(quadprog)H must be specified explicitly for medium-scale algorithm: cannot use HessMult option.
+>(quadprog)中規模なアルゴリズムでは、H を明示的に指定しなければなりません。HessMult オプションは使用できません。
+<(quadprog)Hessian is empty or all zero; calling LINPROG.
+>(quadprog)ヘッセ行列が空か、要素がすべてゼロです。関数 LINPROG を呼び出します。
+<(quadprog)Large-scale algorithm does not currently solve problems with dependent equalities,\nusing medium-scale algorithm instead.
+>(quadprog)現在、大規模なアルゴリズムでは、従属の等式制約のある問題を解くことができません。\n代わりに、中規模なアルゴリズムを使用します。
+<(quadprog)Large-scale algorithm does not currently solve this problem formulation,\nusing medium-scale algorithm instead.
+>(quadprog)現在、大規模なアルゴリズムでは、このように定式化された問題を解くことができません。\n代わりに、中規模なアルゴリズムを使用します。
+<(quadprog)QUADPROG only accepts inputs of data type double.
+>(quadprog)関数 QUADPROG は、double 型の入力しか受け入れません。
+<(quadprog)QUADPROG requires at least two input arguments.
+>(quadprog)関数 QUADPROG には、少なくとも 2 つの入力引数が必要です。
+<(quadprog)The input to QUADPROG should be either a structure with valid fields or consist of at least two arguments.
+>(quadprog)関数 QUADPROG の入力は、有効なフィールドのある構造体か、少なくとも 2 つの引数でなければなりません。
+<(quadprog)This problem formulation not yet available for sparse matrices.\nConverting to full matrices and using medium-scale algorithm instead.
+>(quadprog)このように定式化された問題では、スパース行列は使用できません。\n非スパース行列に変換して、代わりに中規模なアルゴリズムを使用します。
+
+%% toolbox/optim/optim/finDiffFseminf.m
+<(finDiffFseminf)Unknown value of input 'variables'.
+>(finDiffFseminf)入力の 'variables' の値が不明です。
+
+%% toolbox/optim/optim/private/callSolver.m
+<(callSolver)Optimization running.\n
+>(callSolver)最適化中です。\n
+<(callSolver)Optimization terminated.\n
+>(callSolver)最適化が終了しました。\n
+
+%% toolbox/optim/optim/private/changeBoundDualFeasible.m
+<(changeBoundDualFeasible)The index of bound change variables exceeds the number of variables.
+>(changeBoundDualFeasible)境界を変更する変数のインデックスが、変数の数を超えています。
+<(changeBoundDualFeasible)The output xModified does not satisfy the constraints.
+>(changeBoundDualFeasible)出力 xModified は、制約を満たしていません。
+<(changeBoundDualFeasible)The problem is infeasible due to incompatible upper and lower bounds.
+>(changeBoundDualFeasible)問題の上限と下限が矛盾しているため、解を見つけられません。
+
+%% toolbox/optim/optim/private/createResultsStruct.m
+<(createResultsStruct)Unrecognized solver name
+>(createResultsStruct)ソルバー名を認識できません。
+
+%% toolbox/optim/optim/private/dep.m
+<(dep)Function dep expects A to have more cols than rows.
+>(dep)関数 dep の A は、列数が行数より多くなければなりません。
+<(dep)In function dep, dim. of A and b do not match.
+>(dep)関数 dep の A と b の次元が一致していません。
+
+%% toolbox/optim/optim/private/dualsimplex.m
+<(dualsimplex)Dual simplex phase two requires a nonempty starting point x0.
+>(dualsimplex)双対シンプレックス法の 2 段階法では、初期点 x0 を空にすることはできません。
+<(dualsimplex)The leaving variable doesn't violate the boundary conditions.
+>(dualsimplex)除去変数は、境界の条件に違反していません。
+<(dualsimplex)\nMinimize using dual simplex.
+>(dualsimplex)\n双対シンプレックス法で最小化します。
+
+%% toolbox/optim/optim/private/exportopt2wsdlg.m
+<(exportopt2wsdlg)"%s" already exists. Do you want to overwrite it?
+>(exportopt2wsdlg)"%s" は既に存在します。上書きしますか?
+<(exportopt2wsdlg)"%s" and "%s" already exist. Do you want to overwrite them?
+>(exportopt2wsdlg)"%s" と "%s" は既に存在します。上書きしますか?
+<(exportopt2wsdlg)"%s" and "%s" are not valid MATLAB variable names.
+>(exportopt2wsdlg)"%s" と "%s" は有効な MATLAB 変数名ではありません。
+<(exportopt2wsdlg)"%s" is not a valid MATLAB variable name.
+>(exportopt2wsdlg)"%s" は有効な MATLAB 変数名ではありません。
+<(exportopt2wsdlg)%s"%s" and "%s" already exist. Do you want to overwrite them?
+>(exportopt2wsdlg)%s"%s" と "%s" は既に存在します。上書きしますか?
+<(exportopt2wsdlg)%s"%s" and "%s" are not valid MATLAB variable names.
+>(exportopt2wsdlg)%s"%s" と "%s" は有効な MATLAB 変数名ではありません。
+<(exportopt2wsdlg)An empty string is not a valid choice for a variable name.\n
+>(exportopt2wsdlg)空の文字列は変数名として有効な選択ではありません。\n
+<(exportopt2wsdlg)Duplicate variable name
+>(exportopt2wsdlg)変数名の重複
+<(exportopt2wsdlg)Export To Workspace
+>(exportopt2wsdlg)ワークスペースへエクスポート
+<(exportopt2wsdlg)Export options to a MATLAB structure named:
+>(exportopt2wsdlg)オプションを次の名前の MATLAB 構造体にエクスポート:
+<(exportopt2wsdlg)Export problem and options to a MATLAB structure named:
+>(exportopt2wsdlg)問題とオプションを次の名前の MATLAB 構造体にエクスポート:
+<(exportopt2wsdlg)Export results to a MATLAB structure named:
+>(exportopt2wsdlg)結果を次の名前の MATLAB 構造体にエクスポート:
+<(exportopt2wsdlg)Export to Workspace
+>(exportopt2wsdlg)ワークスペースへエクスポート
+<(exportopt2wsdlg)Include information needed to resume this run
+>(exportopt2wsdlg)実行を再開するために必要な情報を含める
+<(exportopt2wsdlg)Invalid Names
+>(exportopt2wsdlg)無効な名前
+<(exportopt2wsdlg)Invalid variable name
+>(exportopt2wsdlg)無効な変数名
+<(exportopt2wsdlg)Invalid variable names
+>(exportopt2wsdlg)無効な変数名
+<(exportopt2wsdlg)Names must be unique
+>(exportopt2wsdlg)固有の名前でなければなりません
+<(exportopt2wsdlg)The variable '%s' has been created in the current workspace.
+>(exportopt2wsdlg)変数 '%s' が現在のワークスペースに作成されました。
+<(exportopt2wsdlg)The variables '%s' and '%s' have been created in the current workspace.
+>(exportopt2wsdlg)変数 '%s' と '%s' が現在のワークスペースに作成されました。
+<(exportopt2wsdlg)The variables '%s', '%s' and '%s' have been created in the current workspace.
+>(exportopt2wsdlg)変数 '%s', '%s' および '%s' が現在のワークスペースに作成されました。
+<(exportopt2wsdlg)You must select an item to export
+>(exportopt2wsdlg)エクスポートする項目を選択しなければなりません。
+
+%% toolbox/optim/optim/private/feasibl.m
+<(feasibl)Function feasible expects at least 2 input arguments.
+>(feasibl)関数が可解になるためには、入力引数が少なくとも 2 つ必要です。
+
+%% toolbox/optim/optim/private/computeTrialStep.m
+<(computeTrialStep)Unknown trialStep.type.
+>(computeTrialStep)trialStep.type が不明です。
+
+%% toolbox/optim/optim/private/lipsol.m
+<(lipsol)  Adding %d inequality constraints of the form: xpos - xneg <= ub(i) for the finite upper bounds.\n
+>(lipsol)  有限の上限を指定するために、xpos - xneg <= ub(i) 形式の不等式制約を %d 個追加します。\n
+<(lipsol)  Adding %d slack variables, one for each inequality constraint (bounds), to the existing\n  set of %d variables,
+>(lipsol)  %d 個のスラック変数を、不等式制約 (境界) 1 つ当たり 1 つずつ既存の \n%d 個の変数に追加します。
+<(lipsol)  Adding %d slack variables, one for each inequality constraint, to the existing\n  set of %d variables,
+>(lipsol)  %d 個のスラック変数を、不等式制約 1 つ当たり 1 つずつ、既存の \n%d 個の変数に追加します。
+<(lipsol)  Assigning %i equal values of lower and upper bounds to solution.\n
+>(lipsol)  解の上限と下限に %i 個の等しい値を割り当てます。\n
+<(lipsol)  Assuming all variables are unbounded above.\n
+>(lipsol)  すべての変数は、上限がないものと仮定します。\n
+<(lipsol)  Assuming all variables are unbounded below.\n
+>(lipsol)  すべての変数は、下に有界でないと仮定します。\n
+<(lipsol)  Combining the %d (formerly inequality) constraints with %d equality constraints,\n  resulting in %d equality constraints on %d variables.\n
+>(lipsol)  %d 個の制約 (以前は不等式) と %d 個の等式制約を組み合わせて、\n%d 個の等式制約 (変数は %d 個) にします。\n
+<(lipsol)  Deleting %i all-zero columns from constraint matrix.\n
+>(lipsol)  制約行列から、要素がすべてゼロの列を %i 個削除します。\n
+<(lipsol)  Deleting %i all-zero rows from constraint matrix.\n
+>(lipsol)  制約行列から、要素がすべてゼロの行を %i 個削除します。\n
+<(lipsol)  Deleting %i dependent rows from constraint matrix.\n
+>(lipsol)  制約行列から、従属行を %i 個削除します。\n
+<(lipsol)  Eliminating %d slack variables (bounds) from solution.\n
+>(lipsol)  解から %d 個のスラック変数 (境界) を除去します。\n
+<(lipsol)  Eliminating %d slack variables from solution.\n
+>(lipsol)  解から %d 個のスラック変数を除去します。\n
+<(lipsol)  Linear Programming problem has %d equality constraints on %d variables.\n
+>(lipsol)  線形計画問題には、%d 個の等式制約 (変数は %d 個) があります。\n
+<(lipsol)  No constraints: converting %d finite upper bounds and %d finite lower bounds into %d inequality constraints.\n
+>(lipsol)  制約がありません。%d 個の有限の上限と %d 個の有限の下限を %d 個の不等式制約に変換します。\n
+<(lipsol)  Reuniting %d fixed variables with solution.\n
+>(lipsol)  %d 個の固定変数を解と再結合します。\n
+<(lipsol)  Reuniting %d obvious zero variables with solution.\n
+>(lipsol)  %d 個の明らかにゼロの変数を解と再結合します。\n
+<(lipsol)  Reuniting %d singleton variables with solution.\n
+>(lipsol)  %d 個のシングルトン変数を解と再結合します。\n
+<(lipsol)  Scaling problem by square roots of infinity norms of rows and columns of constraint matrix.\n
+>(lipsol)  制約行列の行と列の無限ノルムの平方根で問題をスケーリングします。\n
+<(lipsol)  Scaling solution back to original problem.\n
+>(lipsol)  解を元の問題にスケーリングします。\n
+<(lipsol)  Separating out %i dense columns from constraint matrix.\n
+>(lipsol)  制約行列の %i 個の密な列を分割します。\n
+<(lipsol)  Shifting %i non-zero lower bounds to zero.\n
+>(lipsol)  %i 個のゼロでない下限をゼロにします。\n
+<(lipsol)  Shifting solution back away from zero to reflect original lower bounds.\n
+>(lipsol)  元の下限を反映するように、解をゼロから離します。\n
+<(lipsol)  Solution satisfies %d dependent constraints.\n
+>(lipsol)  解は、%d 個の従属制約を満たします。\n
+<(lipsol)  Solving %i singleton variables immediately.\n
+>(lipsol)  直ちに %i 個のシングルトン変数について解きます。\n
+<(lipsol)  Splitting %d (unbounded below) variables into the difference of two strictly\n  positive variables: x(i) = xpos-xneg, such that xpos >= 0, xneg >= 0.\n
+>(lipsol)  %d 個の (下限のない) 変数を 2 つの厳密な正の変数の差に分割します。\nx(i) = xpos-xneg、ただし xpos >= 0、xneg >= 0\n
+<(lipsol)  Subtracting the strictly positive differences of %d unbounded below variables.\n
+>(lipsol)  %d 個の下限のない変数の厳密な正の差を引きます。\n
+<(lipsol)First input to lipsol must be a column vector of weights.
+>(lipsol)関数 lipsol の 1 番目の入力引数は、重みの列ベクトルでなければなりません。
+<(lipsol)One or more of the residuals, duality gap, or total relative error\n has grown 100000 times greater than its minimum value so far:\n
+>(lipsol)現在までに、残差、双対性のギャップ、または相対誤差の合計\nが、その最小値の 100,000 倍になっています:\n
+<(lipsol)One or more of the residuals, duality gap, or total relative error\n has stalled:\n
+>(lipsol)残差、双対性のギャップ、または相対誤差の合計の計算が\n停滞しています:\n
+<(lipsol)Trying to compute lagrange multipliers. \nWhen removing singletons in equality constraints, sgrows does not match sgcols.\n Please report this error to The MathWorks.
+>(lipsol)ラグランジュ乗数を計算しようとしています。\n等式制約のシングルトンを除去するときに、sgrows と sgcols が一致していません。\n このエラーを MathWorks に報告してください。
+
+%% toolbox/optim/optim/private/fminusub.m
+<(fminusub) This may take a substantial amount of time.\n
+>(fminusub) これには、長時間かかることがあります。\n
+<(fminusub)Gradient not supplied but useGrad set to true.
+>(fminusub)勾配が指定されていませんが、useGrad が true に設定されています。
+<(fminusub)Option 'InitialHessMatrix' must be a scalar or a vector of length numberOfVariables.
+>(fminusub)'InitialHessMatrix' オプションは、スカラー、または長さが numberOfVariables のベクトルでなければなりません。
+<(fminusub)Option 'TypicalX' must be a numeric value if not the default.
+>(fminusub)'TypicalX' オプションをデフォルト以外にする場合は、数値でなければなりません。
+<(fminusub)Unknown value of option HessUpdate.
+>(fminusub)HessUpdate オプションの値が不明です。
+<(fminusub)\nComputing finite-difference Hessian using user-supplied objective function.\n
+>(fminusub)\nユーザーが指定した目的関数を使用して、有限差分ヘッセ行列を計算します。\n
+
+%% toolbox/optim/optim/private/lineSearch.m
+<(lineSearch)Search direction is not a descent direction; roundoff errors may be affecting convergence.
+>(lineSearch)探索方向が降下方向ではありません。丸め誤差が収束に影響することがあります。
+<(lineSearch)Undefined calltype in LINESEARCH.
+>(lineSearch)関数 LINESEARCH の calltype が未定義です。
+
+%% toolbox/optim/optim/private/optimguiImportOptions.m
+<(optimguiImportOptions)Import Optimization Options
+>(optimguiImportOptions)最適化オプションのインポート
+<(optimguiImportOptions)Select an options structure to import:
+>(optimguiImportOptions)インポートするオプション構造体の選択:
+
+%% toolbox/optim/optim/private/optimguiImportProblem.m
+<(optimguiImportProblem)There are no problem structures in the workspace.
+>(optimguiImportProblem)ワークスペースに問題の構造体がありません。
+
+%% toolbox/optim/optim/private/optimabout.m
+<(optimabout)About Optimization Toolbox
+>(optimabout)Optimization Toolbox のバージョン情報
+
+%% toolbox/optim/optim/private/optimguiGeneratemfile.m
+<(optimguiGeneratemfile)%% Modify options setting\n
+>(optimguiGeneratemfile)%% オプションの設定の変更\n
+<(optimguiGeneratemfile)Error Saving M File
+>(optimguiGeneratemfile)M ファイルの保存中のエラー
+<(optimguiGeneratemfile)Error closing file %s
+>(optimguiGeneratemfile)ファイル %s を閉じるときのエラー
+<(optimguiGeneratemfile)Error trying to write to %s:\n%s
+>(optimguiGeneratemfile)%s への書き込みでエラーが発生:\n%s
+<(optimguiGeneratemfile)Generate M-File
+>(optimguiGeneratemfile)M ファイルの生成
+<(optimguiGeneratemfile)\n%% Start with the default options\n
+>(optimguiGeneratemfile)\n%% デフォルトのオプションで開始\n
+<(optimguiGeneratemfile)\n%% This is an auto generated M-file from Optimization Tool.\n
+>(optimguiGeneratemfile)\n%% これは、最適化ツールで自動的に生成された M ファイルです。\n
+
+%% toolbox/optim/optim/private/preaug.m
+<(preaug)Matrix A should have more columns than rows.
+>(preaug)行列 A は、列数が行数より多くなければなりません。
+<(preaug)No input parameters in function PREAUG.
+>(preaug)関数 PREAUG の入力パラメーターがありません。
+<(preaug)Size of A conflicts with that of H in function PREAUG.
+>(preaug)関数 PREAUG の A のサイズが H と競合しています。
+
+%% toolbox/optim/optim/private/project.m
+<(project)Function PROJECT expects A to have more columns than rows.
+>(project)関数 PROJECT の A は、列数が行数より多くなければなりません。
+
+%% toolbox/optim/optim/private/simplex.m
+<(simplex)  Assuming all variables are unbounded above.
+>(simplex)  すべての変数は、上に有界でないと仮定します。
+<(simplex)  Assuming all variables are unbounded below.
+>(simplex)  すべての変数は、下に有界でないと仮定します。
+<(simplex)First input to lpdriver must be a column vector of weights.
+>(simplex)関数 lpdriver の第 1 入力引数は、重みの列ベクトルでなければなりません。
+<(simplex)The objective coefficients are all zeros or empty, skipping Phase 2.
+>(simplex)目的関数の係数がすべてゼロか空です。第 2 段階をスキップします。
+<(simplex)Wrong status.
+>(simplex)status が間違っています。
+
+%% toolbox/optim/optim/private/simplexphaseone.m
+<(simplexphaseone)The default starting point is feasible, skipping Phase 1.
+>(simplexphaseone)デフォルトの初期点が可解です。第 1 段階をスキップします。
+
+%% toolbox/optim/optim/private/simplexphasetwo.m
+<(simplexphasetwo)Exiting form SIMPLEXPHASETWO: the constraint matrix A is empty.
+>(simplexphasetwo)関数 SIMPLEXPHASETWO を終了します。制約配列 A が空です。
+<(simplexphasetwo)The choice of the entering variable is wrong.
+>(simplexphasetwo)変数の選択が間違っています。
+<(simplexphasetwo)There is no other proper choice of the entering variable.
+>(simplexphasetwo)この他に選択できる正しい変数はありません。
+<(simplexphasetwo)\nPhase 2: Minimize using simplex.
+>(simplexphasetwo)\n第 2 段階: シンプレックス法で最小化します。
+
+%% toolbox/optim/optim/private/simplexpiecewise.m
+<(simplexpiecewise)At least 9 input arguments are required.
+>(simplexpiecewise)少なくとも 9 つの入力引数が必要です。
+<(simplexpiecewise)No first feasible basis is available.
+>(simplexpiecewise)初期の実行可能な基底がありません。
+<(simplexpiecewise)The constraint matrix A must be nonempty.
+>(simplexpiecewise)制約行列 A を空にすることはできません。
+<(simplexpiecewise)\nPhase 1: Compute initial basic feasible point.
+>(simplexpiecewise)\n第 1 段階: 初期の実行可能な基底点を求めます。
+
+%% toolbox/optim/optim/private/simplexpresolve.m
+<(simplexpresolve)Trying to compute Lagrange multipliers. \nWhen removing row singletons in equality constraints, sgrows does not match sgcols.\n Please report this error to The MathWorks.
+>(simplexpresolve)ラグランジュ乗数を計算しようとしています。\n等式制約の行のシングルトンを除去するときに、sgrows と sgcols が一致していません。\n このエラーを MathWorks に報告してください。
+
+%% toolbox/optim/optim/private/optimhelpviewer.m
+<(optimhelpviewer)Unable to display help for Optimtool
+>(optimhelpviewer)Optimtool のヘルプを表示できません。
+
+%% toolbox/optim/optim/private/validProblem.m
+<(validProblem)The input structure is missing the required field "%s".\n
+>(validProblem)入力の構造体には、必要なフィールド "%s" がありません。\n
+<(validProblem)The value for "%s" field is invalid.\n
+>(validProblem)"%s" フィールドに対する値が無効です。\n
+
+%% toolbox/optim/optim/private/backsolveSys.m
+<(backsolveSys)Bad LinearSystemSolver option selected.
+>(backsolveSys)LinearSystemSolver オプションの選択が不適切です。
+
+%% toolbox/optim/optim/private/computeHessian.m
+<(computeHessian)Bad HessType option selected.
+>(computeHessian)HessType オプションの選択が不適切です。
+
+%% toolbox/optim/optim/private/ppcgr.m
+<(ppcgr)PPCGR requires at least 3 input arguments.
+>(ppcgr)関数 PPCGR には、少なくとも 3 つの入力引数が必要です。
+<(ppcgr)The number of rows in Aeq is incompatible with the length of beq.
+>(ppcgr)Aeq の行数が beq の長さと同じでありません。
+
+%% toolbox/optim/optim/private/hessTimesVector.m
+<(hessTimesVector)In order to honor the bounds on the variables, the stepsize of the finite-difference in gradients became too small (less than OPTIONS.DiffMinChange). Try running with OPTIONS.AlwaysHonorConstraints set to 'none'.
+>(hessTimesVector)変数の制約を満たすために、有限差分勾配を求めるステップサイズが小さくなりすぎています (OPTIONS.DiffMinChange 未満)。OPTIONS.AlwaysHonorConstraints を 'none' に設定して実行してください。
+
+%% toolbox/optim/optim/private/validateFirstDerivatives.m
+<(validateFirstDerivatives)  Finite-difference constraint gradient: % g\n
+>(validateFirstDerivatives)  有限差分制約の勾配: % g\n
+<(validateFirstDerivatives)  Finite-difference gradient: % g\n
+>(validateFirstDerivatives)  有限差分勾配: % g\n
+<(validateFirstDerivatives)  User-supplied constraint gradient:     % g\n
+>(validateFirstDerivatives)  ユーザー指定の制約の勾配: % g\n
+<(validateFirstDerivatives)  User-supplied gradient:     % g\n
+>(validateFirstDerivatives)  ユーザー指定の勾配: % g\n
+<(validateFirstDerivatives) not match within %g relative tolerance.\n
+>(validateFirstDerivatives) %g の相対許容範囲内では一致しません。\n
+<(validateFirstDerivatives)Caution: user-supplied and %s finite-difference derivatives do\n
+>(validateFirstDerivatives)注意: ユーザーが指定した導関数と有限差分の導関数 %s が \n
+<(validateFirstDerivatives)Maximum relative difference occurs in element %i of gradient:\n
+>(validateFirstDerivatives)勾配の要素 %i で相対誤差が最大:\n
+<(validateFirstDerivatives)Maximum relative difference occurs in element (%i,%i):\n
+>(validateFirstDerivatives)要素 (%i,%i) で相対誤差が最大:\n
+<(validateFirstDerivatives)Maximum relative discrepancy between derivatives = %g\n
+>(validateFirstDerivatives)導関数間の最大相対誤差 = %g\n
+<(validateFirstDerivatives)Nonlinear equality constraint derivatives:\n
+>(validateFirstDerivatives)非線形等式制約の導関数:\n
+<(validateFirstDerivatives)Nonlinear inequality constraint derivatives:\n
+>(validateFirstDerivatives)非線形不等式制約の導関数:\n
+<(validateFirstDerivatives)Objective function derivatives:\n
+>(validateFirstDerivatives)目的関数の導関数:\n
+<(validateFirstDerivatives)Strike any key to continue or Ctrl-C to abort.
+>(validateFirstDerivatives)続行するには、いずれかのキーを押してください。中止するには、Ctrl キーを押しながら C キーを押してください。
+
+%% toolbox/optim/optim/private/sqpmin.m
+<(sqpmin)MaxPCGIter is ignored for large-scale, equality constrained problems. Use MaxIter instead.
+>(sqpmin)等式制約付き問題を大規模なアルゴリズムで解く場合は、MaxPCGIter が無視されます。代わりに MaxIter を使用してください。
+<(sqpmin)TolPCG is ignored for large-scale, equality constrained problems. Use TolFun instead.
+>(sqpmin)等式制約付き問題を大規模なアルゴリズムで解く場合は、TolPCG が無視されます。代わりに TolFun を使用してください。
+
+%% toolbox/optim/optim/private/trustnleqn.m
+<(trustnleqn)DerivativeCheck on but analytic Jacobian not provided;\n         turning DerivativeCheck off.
+>(trustnleqn)DerivativeCheck が on になっていますが、解析的なヤコビ行列が指定されていません。\n         DerivativeCheck を off にします。
+
+
+%% toolbox\optim\optim/private/exportopt2wsdlg.m
+<(exportopt2wsdlg)Duplicate variable names
+>(exportopt2wsdlg)変数名の重複
+
+%% toolbox\optim\optim/private/computeSearchDirSQP.m
+<(computeSearchDirSQP)An internal error from the QP solver was caught. Try re-running with options.Algorithm = 'interior-point'.
+>(computeSearchDirSQP)QP ソルバーに内部エラーが発生しました。options.Algorithm = 'interior-point' を再び実行してみてください。
+
+%% toolbox\optim\optim/private/optimguirun.m
+<(optimguirun)Error running optimization.\n
+>(optimguirun)最適化の実行中にエラーが発生しました。\n
+
+<[exportopt2wsdlg](exportopt2wsdlg)Cancel
+>(exportopt2wsdlg)キャンセル
+
+<()default options
+>()既定のオプション
+
+<(optimguiImportProblem)Select a problem structure to import:
+>(optimguiImportProblem.)インポートする問題の構造体を選択:
+<(optimguiImportProblem)Import Optimization Problem
+>(optimguiImportProblem.)最適化問題のインポート
