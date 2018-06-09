@@ -46,6 +46,8 @@ end
 % Ecuacion a resolver Qbomba -  Qsystema = 0, equilibrio entre la bomba y
 % mi sistema.
 
+%%%%%% RETOMAR POR ACA %%%%
+
 % Curva de Bomba
 
 QbMax = 0.08 / 3600;                % [m^3 / s] Entrada en [m^3 / h]
