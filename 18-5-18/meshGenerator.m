@@ -1,5 +1,8 @@
-function [elements,nodeDofs,nodesEleLocal,b,nodosUnicos] = meshGenerator(elem8Nod,nod,elementsBarra)
+function fisurasInfo = meshGenerator(meshInfo,fisurasInfo,iFisura)
 
+elem8Nod = meshInfo.elem8Nod;
+nod = meshInfo.nodes;
+elementsBarra = fisurasInfo(iFisura).elementsBarra;
 
 %% Funciones Ignacio Torrusio - H8 to Q4
 
@@ -11,9 +14,9 @@ elemNew = generadorElementosQ4(elem8Nod);                                     % 
 
 [nodFisura] = posicionFisura(nod,elementsBarra);                              % Esto indica que nodos pertenecen al dominio de la fisura. Cuenta tambien la cantidad de nodos, nNods.
 
-[bCorr,b] = aperturaDeGrietaConCorreccion(nod,elementsBarra,f,f_0);           % Toma la altura que le pertenece a cada nodo de la fisura.
+[bCorr,hh] = aperturaDeGrietaConCorreccion(nod,elementsBarra,f,f_0);           % Toma la altura que le pertenece a cada nodo de la fisura.
 
-selectorLogico = seleccionDeElementosDeFisura(elementsBarra,elemNew,aperturaMinima,b);    % Este selector logico tiene la dimension de elemNew e indica quienes de ellos son efectivamente caras de la fisura. Siendo true cuando lo es, y falso cuando no.
+selectorLogico = seleccionDeElementosDeFisura(elementsBarra,elemNew,aperturaMinima,hh);    % Este selector logico tiene la dimension de elemNew e indica quienes de ellos son efectivamente caras de la fisura. Siendo true cuando lo es, y falso cuando no.
 
 
 %% Conversioón a malla reducida
@@ -58,7 +61,11 @@ end
 
 
 
-
+fisurasInfo(iFisura).elements = elements;
+fisurasInfo(iFisura).nodeDofs = nodeDofs;
+fisurasInfo(iFisura).nodesEleLocal = nodesEleLocal;
+fisurasInfo(iFisura).hh = hh;
+fisurasInfo(iFisura).nodosUnicos = nodosUnicos;
 
 
 end
